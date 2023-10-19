@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+table{
+    border-collapse: collapse;
+    display: none;
+}
+td,th{
+    border: 2px solid black;
+    text-align: center;
+}
+#me ::placeholder{
+    text-align: center;
+}
+#me input{
+    width: 100%;
+}

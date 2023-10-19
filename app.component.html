@@ -1,0 +1,32 @@
+<input type="text" placeholder="enter your items" #first list="mylist">
+<datalist id="mylist">
+  <option value="tea"></option>
+  <option value="kapi"></option>
+  <option value="copy"></option>
+  <option value="biscute"></option>
+  <option value="pohe"></option>
+</datalist>
+<input type="text" placeholder="enter your quantity" #second>
+<input type="number" placeholder="enter your prise" #three>
+<button (click)="myfun(first,second,three)">click</button>
+<button (click)="fun3(second,three)">Total</button>
+<!-- <button (click)="fun4()">clear</button> -->
+<table>
+  <tr>
+      <th>Sr.</th>
+      <th>Item Name</th>
+      <th>Quantity</th>
+      <th>Prise</th>
+      <th>Remove</th>
+  </tr>
+  <tr *ngFor="let key of arr let i=index">
+    <td>{{i+1}}</td>
+    <td>{{key.fkey}}</td>
+    <td>{{key.skey}}</td>
+    <td>{{key.tkey}}</td>
+    <td><button (click)="fun2(i)">remove</button></td>
+  </tr>
+  <tr>
+    <td colspan="5" id="me"><input type="text" id="demo" placeholder="total"></td>
+  </tr>
+</table>
